@@ -38,6 +38,24 @@ function validateLogin() {
   rememberCheckbox.checked = false;
 }
 
+function handleForgotPassword() {
+  const emailInput = document.getElementById('email');
+  const email = emailInput.value.trim();
+
+  if (!email) {
+      alert('Please enter your email address to reset your password.');
+      return;
+  }
+
+  if (!isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+      return;
+  }
+
+  // Simulate sending password reset link
+  alert('A password reset link has been sent to ' + email);
+}
+
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
