@@ -24,18 +24,20 @@ function validateLogin() {
       return;
   }
 
-  // Handle "Remember Me"
-  if (rememberCheckbox.checked) {
-      localStorage.setItem('rememberedEmail', email);
-  } else {
-      localStorage.removeItem('rememberedEmail');
-  }
+  // Check password
+  if (password === 'admin') {
+      // Handle "Remember Me"
+      if (rememberCheckbox.checked) {
+          localStorage.setItem('rememberedEmail', email);
+      } else {
+          localStorage.removeItem('rememberedEmail');
+      }
 
-  // Simulate login
-  alert('Login successful! Email: ' + email);
-  emailInput.value = '';
-  passwordInput.value = '';
-  rememberCheckbox.checked = false;
+      // Redirect to home page
+      window.location.href = 'home.html';
+  } else {
+      alert('Incorrect password. Please try again.');
+  }
 }
 
 function handleForgotPassword() {
