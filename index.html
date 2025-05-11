@@ -18,11 +18,16 @@
                     class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter your email" required>
             </div>
-            <div class="mb-6">
+            <div class="mb-4">
                 <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                 <input type="password" id="password" name="password"
                     class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter your password" required>
+            </div>
+            <div class="mb-6 flex items-center">
+                <input type="checkbox" id="remember" name="remember"
+                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="remember" class="ml-2 text-sm text-gray-700">Remember Me</label>
             </div>
             <button onclick="validateLogin()" type="button"
                 class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">Sign
@@ -32,7 +37,7 @@
             Don't have an account? <a href="#" class="text-blue-600 hover:underline">Sign up</a>
         </p>
     </div>
-    <script src="/page2.js"></script>
+    <script src="/index.js"></script>
 </body>
 
 </html>
