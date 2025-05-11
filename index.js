@@ -109,10 +109,12 @@ function btnClick() {
 
 function redBtnClick() {
   document.getElementById("c-1").style.backgroundColor = "red";
+  document.getElementById("para").style.color = "blue";
 }
 
 function blueBtnClick() {
   document.getElementById("c-1").style.backgroundColor = "blue";
+  document.getElementById("para").style.color = "red";
 }
 
 function onOver() {
