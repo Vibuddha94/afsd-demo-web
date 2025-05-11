@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Java Script</h1>
+
+    <button onclick="btnClick()">Click Me</button>
+    <h2 id="d-1"></h2>
+    <div id="d-2"></div>
+
+    <div class="container">
+        <div class="btns">
+            <button id="red" onclick="redBtnClick()">RED</button>
+            <button id="blue" onclick="blueBtnClick()">BLUE</button>
+        </div>
+        <div class="box" id="c-1" onmouseenter="onOver()" onmouseleave="onOut()"></div>
+    </div>
+
+    <input onkeyup="keyUp()" id="inp" type="text">
+    <h1 id="h"></h1>
+
+
+    <!-- Internal  -->
+    <script>
+        console.log('Internal JS');
+    </script>
+
+    <!-- External -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
