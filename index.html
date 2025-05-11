@@ -4,46 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <h1>Java Script</h1>
-    <a href="/page2.html">page 2</a>
-
-    <button onclick="btnClick()">Click Me</button>
-    <h2 id="d-1"></h2>
-    <div id="d-2"></div>
-
-    <div class="container">
-        <div class="btns">
-            <button id="red" onclick="redBtnClick()">RED</button>
-            <button id="blue" onclick="blueBtnClick()">BLUE</button>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
+        <div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email"
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your email" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password"
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your password" required>
+            </div>
+            <button onclick="validateLogin()" type="button"
+                class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">Sign
+                In</button>
         </div>
-        <div class="box" id="c-1" onmouseenter="onOver()" onmouseleave="onOut()">
-            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit facere vitae, sit
-                voluptatum unde, nisi magnam fugiat repudiandae soluta iusto porro eaque optio harum ullam sunt
-                consectetur ratione eos? Cum qui velit tempora delectus porro dolores, quaerat eius nesciunt dolorum
-                maxime, eum quibusdam, doloribus impedit eligendi neque laboriosam corrupti nihil debitis similique
-                vitae illo voluptate. Dignissimos quia quas voluptates. Deserunt dicta blanditiis a placeat fugit.
-                Ducimus, impedit, eaque incidunt doloremque sunt vel itaque in omnis natus soluta iusto qui quisquam. Id
-                quisquam voluptatum vero perferendis corporis libero dicta facere repellendus. A minus iure voluptatum
-                ducimus mollitia. Esse, animi fugiat!</p>
-        </div>
+        <p class="mt-4 text-center text-sm text-gray-600">
+            Don't have an account? <a href="#" class="text-blue-600 hover:underline">Sign up</a>
+        </p>
     </div>
-
-    <input onkeyup="keyUp()" id="inp" type="text">
-    <h1 id="h"></h1>
-
-
-    <!-- Internal  -->
-    <script>
-        console.log('Internal JS');
-    </script>
-
-    <!-- External -->
-    <script src="./index.js"></script>
+    <script src="/page2.js"></script>
 </body>
 
 </html>
